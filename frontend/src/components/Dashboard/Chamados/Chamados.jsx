@@ -24,7 +24,7 @@ const Chamados = () => {
                     </div>
                 </div>
             </div>
-           {abrirModal  && <ModalChamados />}
+           {abrirModal && <ModalChamados onClose={() => setAbrirModal(false)} />}
         </>
     )
 }
