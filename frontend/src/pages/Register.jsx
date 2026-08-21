@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Register = () => {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const register = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email,
+        password
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Conta criada com sucesso!");
+      navigate("/login");
+    } else {
+      alert(data.message);
+    }
+  };
+
   return (
     <div className="container min-vh-100 d-flex justify-content-center align-items-center">
       <div className="card shadow-sm border-0 rounded-4 w-100" style={{ maxWidth: "380px" }}>
@@ -11,15 +43,17 @@ const Register = () => {
             <p className="text-muted mb-0">Crie uma conta</p>
           </div>
 
-          <form>
+          <form onSubmit={register}>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email</label>
 
               <input
                 type="email"
                 className="form-control"
-                id="email"
                 placeholder="Digite seu email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
 
@@ -29,8 +63,10 @@ const Register = () => {
               <input
                 type="password"
                 className="form-control"
-                id="senha"
                 placeholder="Digite sua senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </div>
 

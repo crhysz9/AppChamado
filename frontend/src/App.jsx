@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
-import DashboardUsers from "./components/DashboardUsers/DashboardUsers";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import DashboardUsers from "./components/DashboardUsers/DashboardUsers";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <Navbar />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/users" element={<DashboardUsers />} />
+            <Route path="/user" element={<DashboardUsers />} />
+            <Route path="/admin" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
