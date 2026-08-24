@@ -1,10 +1,3 @@
-Sim. O problema provavelmente é que alguns badges/ícones estavam usando URLs externas que o GitHub não estava renderizando corretamente — principalmente o `skillicons.dev`.
-
-Para evitar isso, vou deixar o README usando **Shields.io**, que é muito confiável no GitHub, e os logos oficiais incorporados nos próprios badges.
-
-Copie **todo o conteúdo abaixo** para o seu `README.md`:
-
-````markdown
 # 🎫 Sistema de Chamados — Suporte Técnico de TI
 
 <p align="center">
@@ -603,8 +596,3 @@ Se você gostou do projeto ou está acompanhando nosso desenvolvimento, consider
 ### Código desenvolvido manualmente.
 
 </div>
-```
-
-**Agora os badges não dependem do `skillicons.dev`**: eles são imagens geradas pelo **Shields.io**, com os logos das próprias tecnologias. Isso tende a funcionar diretamente no GitHub.
-
-E um detalhe importante: no README do GitHub, **não precisa colocar HTML `<img>` para esses badges**. O formato `![Nome](URL)` acima é o Markdown padrão e o GitHub renderiza as imagens automaticamente.
