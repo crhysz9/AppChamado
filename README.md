@@ -204,46 +204,6 @@ O projeto está atualmente em desenvolvimento.
 
 ---
 
-# 📂 Estrutura do Projeto
-
-```text
-sistema-chamados/
-│
-├── backend/
-│   │
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   ├── middlewares/
-│   │   └── server.js
-│   │
-│   ├── prisma/
-│   │   └── schema.prisma
-│   │
-│   ├── package.json
-│   └── .env
-│
-├── frontend/
-│   │
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── assets/
-│   │   └── App.jsx
-│   │
-│   ├── package.json
-│   └── index.html
-│
-├── .gitignore
-└── README.md
-```
-
-> A estrutura pode ser modificada conforme o desenvolvimento do projeto.
-
----
-
 # 🚀 Como Executar o Projeto
 
 ## 1️⃣ Clone o repositório
