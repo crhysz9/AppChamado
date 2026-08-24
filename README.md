@@ -1,13 +1,22 @@
+Sim. O problema provavelmente é que alguns badges/ícones estavam usando URLs externas que o GitHub não estava renderizando corretamente — principalmente o `skillicons.dev`.
+
+Para evitar isso, vou deixar o README usando **Shields.io**, que é muito confiável no GitHub, e os logos oficiais incorporados nos próprios badges.
+
+Copie **todo o conteúdo abaixo** para o seu `README.md`:
+
 ````markdown
 # 🎫 Sistema de Chamados — Suporte Técnico de TI
 
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-yellow?style=for-the-badge" alt="Status: Em Desenvolvimento">
-  <img src="https://img.shields.io/badge/SEM-IA-red?style=for-the-badge" alt="Sem IA">
+
+![Status](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-yellow?style=for-the-badge)
+
+![SEM IA](https://img.shields.io/badge/PROJETO-SEM%20IA-red?style=for-the-badge)
+
 </p>
 
 <p align="center">
-  <strong>Sistema web para gerenciamento de chamados de suporte técnico de TI.</strong>
+  <strong>Sistema Web para gerenciamento de chamados de suporte técnico de TI.</strong>
 </p>
 
 <p align="center">
@@ -24,7 +33,7 @@ Toda a lógica, estrutura, programação e integração do sistema estão sendo 
 
 A proposta é utilizar o projeto como uma forma de **aprendizado prático**, colocando em aplicação conhecimentos de programação, desenvolvimento Web, APIs, banco de dados e arquitetura Full Stack.
 
-**Nenhuma Inteligência Artificial é utilizada para implementar a lógica do sistema.**
+### 🚫 Não utilizamos Inteligência Artificial para desenvolver o código do projeto.
 
 ---
 
@@ -52,40 +61,64 @@ O projeto está sendo desenvolvido com foco em:
 
 ## 🎨 Front-end
 
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
-</p>
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+---
 
 ## ⚙️ Back-end
 
-<p>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
-</p>
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+
+---
 
 ## 🗄️ Banco de Dados
 
-<p>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-</p>
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+---
 
 ## 🔧 Ferramentas
 
-<p>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code">
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+---
+
+# 💻 Stack Completa
+
+<p align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+
 </p>
 
 ---
 
-# 🧩 Stack do Projeto
+# 🧩 Função de Cada Tecnologia
 
-| Tecnologia | Função |
+| Tecnologia | Utilização |
 |---|---|
 | 🟧 **HTML5** | Estrutura das páginas |
 | 🟨 **JavaScript** | Lógica da aplicação |
@@ -96,86 +129,89 @@ O projeto está sendo desenvolvido com foco em:
 | 🔷 **Prisma** | ORM e comunicação com o banco de dados |
 | 🍃 **MongoDB** | Armazenamento dos dados |
 | 🔧 **Git** | Controle de versão |
-| 🐙 **GitHub** | Hospedagem e colaboração do projeto |
+| 🐙 **GitHub** | Hospedagem e colaboração |
 | 💻 **VS Code** | Ambiente de desenvolvimento |
 
 ---
 
 # 🏗️ Arquitetura do Sistema
 
-O sistema utiliza uma arquitetura dividida em três principais partes:
+O sistema utiliza uma arquitetura dividida principalmente em:
 
 ```text
-┌─────────────────────────────────────────────┐
-│                  USUÁRIO                    │
-└──────────────────────┬──────────────────────┘
-                       │
-                       ▼
-┌─────────────────────────────────────────────┐
-│                  REACT                      │
-│               FRONT-END                     │
-│                                             │
-│  • Interface                                │
-│  • Componentes                              │
-│  • Formulários                              │
-│  • Chamados                                 │
-└──────────────────────┬──────────────────────┘
-                       │
-                       │ HTTP / API REST
-                       ▼
-┌─────────────────────────────────────────────┐
-│              NODE.JS + EXPRESS              │
-│                  BACK-END                   │
-│                                             │
-│  • Rotas                                    │
-│  • Regras de negócio                        │
-│  • Requisições                              │
-│  • Respostas                                │
-└──────────────────────┬──────────────────────┘
-                       │
-                       ▼
-┌─────────────────────────────────────────────┐
-│                  PRISMA                     │
-│                    ORM                      │
-└──────────────────────┬──────────────────────┘
-                       │
-                       ▼
-┌─────────────────────────────────────────────┐
-│                  MONGODB                    │
-│                BANCO DE DADOS               │
-└─────────────────────────────────────────────┘
+                    ┌─────────────────────┐
+                    │       USUÁRIO       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │        REACT        │
+                    │     FRONT-END       │
+                    └──────────┬──────────┘
+                               │
+                               │ HTTP / API
+                               ▼
+                    ┌─────────────────────┐
+                    │       EXPRESS       │
+                    │       NODE.JS       │
+                    │      BACK-END       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │       PRISMA        │
+                    │         ORM         │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │       MONGODB       │
+                    │    BANCO DE DADOS   │
+                    └─────────────────────┘
 ````
 
 ---
 
 # 🎫 Funcionalidades
 
-Atualmente o projeto está em desenvolvimento.
+O projeto está atualmente em desenvolvimento.
 
-Entre as funcionalidades planejadas/desenvolvidas estão:
+### 👤 Usuários
 
-* [ ] 👤 Cadastro de usuários
-* [ ] 🔐 Sistema de login
-* [ ] 🎫 Criação de chamados
-* [ ] 📋 Listagem de chamados
-* [ ] 🔎 Consulta de chamados
-* [ ] 📝 Edição de chamados
-* [ ] 🔄 Alteração de status
-* [ ] 👨‍💻 Identificação do responsável pelo chamado
-* [ ] 📅 Registro de datas
-* [ ] 🚨 Definição de prioridade
-* [ ] 🗂️ Organização dos chamados
-* [ ] 💬 Comunicação relacionada ao chamado
-* [ ] 📊 Dashboard
-* [ ] 📈 Estatísticas de chamados
+* [ ] Cadastro de usuários
+* [ ] Login
+* [ ] Autenticação
+* [ ] Perfil do usuário
 
-> As funcionalidades podem ser alteradas ou ampliadas conforme o desenvolvimento do projeto.
+### 🎫 Chamados
+
+* [ ] Criar chamado
+* [ ] Listar chamados
+* [ ] Visualizar chamado
+* [ ] Editar chamado
+* [ ] Alterar status
+* [ ] Definir prioridade
+* [ ] Atribuir responsável
+
+### 📊 Dashboard
+
+* [ ] Dashboard
+* [ ] Chamados abertos
+* [ ] Chamados em andamento
+* [ ] Chamados finalizados
+* [ ] Estatísticas
+
+### 🔧 Melhorias
+
+* [ ] Responsividade
+* [ ] Melhorias de UX/UI
+* [ ] Validações
+* [ ] Tratamento de erros
+* [ ] Melhor organização do código
 
 ---
 
 # 📂 Estrutura do Projeto
-
-Uma possível estrutura utilizada no projeto:
 
 ```text
 sistema-chamados/
@@ -211,13 +247,13 @@ sistema-chamados/
 └── README.md
 ```
 
-> A estrutura pode mudar conforme novas funcionalidades forem implementadas.
+> A estrutura pode ser modificada conforme o desenvolvimento do projeto.
 
 ---
 
 # 🚀 Como Executar o Projeto
 
-## 1️⃣ Clonar o repositório
+## 1️⃣ Clone o repositório
 
 ```bash
 git clone URL_DO_REPOSITORIO
@@ -249,15 +285,13 @@ npm install
 
 # 🗄️ Configurando o MongoDB
 
-O projeto utiliza **MongoDB** como banco de dados.
-
 Crie um arquivo:
 
 ```text
 .env
 ```
 
-Dentro dele, configure a conexão:
+Configure sua conexão com o MongoDB:
 
 ```env
 DATABASE_URL="SUA_STRING_DE_CONEXAO_MONGODB"
@@ -275,13 +309,13 @@ DATABASE_URL="mongodb+srv://usuario:senha@cluster.mongodb.net/chamados"
 
 # 🔷 Configurando o Prisma
 
-Depois de configurar o banco de dados:
+Execute:
 
 ```bash
 npx prisma generate
 ```
 
-Caso seja necessário sincronizar o schema:
+Para sincronizar o banco:
 
 ```bash
 npx prisma db push
@@ -290,8 +324,6 @@ npx prisma db push
 ---
 
 # ▶️ Executando o Back-end
-
-Execute:
 
 ```bash
 npm run dev
@@ -302,8 +334,6 @@ ou:
 ```bash
 npm start
 ```
-
-O servidor será iniciado na porta configurada no projeto.
 
 Exemplo:
 
@@ -329,13 +359,13 @@ Instale as dependências:
 npm install
 ```
 
-Execute o projeto:
+Execute:
 
 ```bash
 npm run dev
 ```
 
-O terminal exibirá o endereço local da aplicação.
+O terminal mostrará o endereço da aplicação.
 
 Exemplo:
 
@@ -347,7 +377,7 @@ http://localhost:5173
 
 # 🔐 Variáveis de Ambiente
 
-Informações sensíveis devem ficar armazenadas no arquivo:
+Informações sensíveis devem ficar no arquivo:
 
 ```text
 .env
@@ -360,7 +390,7 @@ DATABASE_URL="mongodb+srv://..."
 PORT=3000
 ```
 
-O arquivo `.env` **não deve ser enviado para o GitHub**.
+Nunca envie o `.env` para o GitHub.
 
 Adicione ao `.gitignore`:
 
@@ -373,7 +403,7 @@ node_modules/
 
 # 🔌 API
 
-O Back-end utiliza o **Express.js** para criação das rotas da API.
+O Back-end utiliza **Express.js** para criação das rotas da API.
 
 Exemplo de estrutura:
 
@@ -393,91 +423,58 @@ API
     └── DELETE
 ```
 
-> As rotas podem sofrer alterações durante o desenvolvimento.
+As rotas podem sofrer alterações conforme o desenvolvimento.
 
 ---
 
-# 🎯 Objetivos do Projeto
+# 🎯 Objetivos
 
-O projeto possui como principais objetivos:
+O projeto tem como objetivos:
 
-### 📚 Aprendizado
-
-Colocar em prática conceitos de programação e desenvolvimento Full Stack.
-
-### 🧠 Lógica de Programação
-
-Desenvolver a capacidade de criar soluções sem depender de Inteligência Artificial.
-
-### 🌐 Desenvolvimento Web
-
-Aprender e aplicar conceitos de Front-end e Back-end.
-
-### 🔌 APIs
-
-Criar e consumir APIs utilizando JavaScript, Node.js e Express.
-
-### 🗄️ Banco de Dados
-
-Trabalhar com persistência de dados utilizando MongoDB e Prisma.
-
-### ⚛️ React
-
-Desenvolver interfaces utilizando componentes React.
-
-### 🤝 Trabalho em Equipe
-
-Aprender a desenvolver um projeto em dupla utilizando Git e GitHub.
-
-### 💼 Portfólio
-
-Criar um projeto real para demonstrar conhecimentos em desenvolvimento de software.
+* 📚 Praticar desenvolvimento Full Stack
+* 🧠 Desenvolver lógica de programação
+* 🔌 Criar e consumir APIs
+* 🗄️ Trabalhar com bancos de dados
+* ⚛️ Aprender React na prática
+* 🟢 Trabalhar com Node.js
+* 🚂 Trabalhar com Express
+* 🔷 Aprender Prisma
+* 🍃 Trabalhar com MongoDB
+* 🤝 Desenvolver um projeto em dupla
+* 🔧 Utilizar Git e GitHub
+* 💼 Criar um projeto para portfólio
 
 ---
 
-# 🚫🤖 Por que "SEM IA"?
+# 🚫🤖 Por que SEM IA?
 
-Este projeto possui uma proposta diferente:
+A proposta principal deste projeto é:
 
 > **Aprender fazendo.**
 
-Durante o desenvolvimento, buscamos compreender o funcionamento do código, pesquisar soluções, testar, cometer erros e corrigir os problemas encontrados.
+Queremos entender como o sistema funciona e desenvolver nossa capacidade de resolver problemas através de programação.
 
-A intenção é desenvolver nossa capacidade de:
+Durante o desenvolvimento buscamos:
 
-* Pensar em soluções;
-* Entender os erros;
-* Criar algoritmos;
-* Pesquisar documentação;
-* Trabalhar com banco de dados;
-* Construir APIs;
-* Desenvolver interfaces;
-* Trabalhar em equipe;
-* Resolver problemas reais.
+* 🧠 Criar nossas próprias soluções
+* 🔎 Pesquisar documentação
+* 🧪 Testar diferentes abordagens
+* 🐛 Encontrar e corrigir bugs
+* 💻 Escrever nosso próprio código
+* 📚 Aprender com os erros
+* 🤝 Desenvolver em equipe
 
 Por isso:
 
 # ❌🤖 SEM IA
 
-**O código é desenvolvido pelos próprios integrantes do projeto.**
-
----
-
-# 📈 Status do Projeto
-
-<div align="center">
-
-### 🚧 EM DESENVOLVIMENTO 🚧
-
-O sistema está sendo desenvolvido e novas funcionalidades serão adicionadas ao longo do projeto.
-
-</div>
+**O código é desenvolvido manualmente pelos integrantes do projeto.**
 
 ---
 
 # 🗺️ Roadmap
 
-## 🔹 Etapa 1 — Estrutura
+### 🔹 Etapa 1 — Estrutura
 
 * [x] Criar projeto
 * [x] Configurar Front-end
@@ -488,14 +485,14 @@ O sistema está sendo desenvolvido e novas funcionalidades serão adicionadas ao
 * [x] Configurar MongoDB
 * [x] Configurar Prisma
 
-## 🔹 Etapa 2 — Usuários
+### 🔹 Etapa 2 — Usuários
 
 * [ ] Cadastro
 * [ ] Login
 * [ ] Autenticação
-* [ ] Perfil do usuário
+* [ ] Perfil
 
-## 🔹 Etapa 3 — Chamados
+### 🔹 Etapa 3 — Chamados
 
 * [ ] Criar chamado
 * [ ] Listar chamados
@@ -503,8 +500,9 @@ O sistema está sendo desenvolvido e novas funcionalidades serão adicionadas ao
 * [ ] Editar chamado
 * [ ] Alterar status
 * [ ] Definir prioridade
+* [ ] Responsável
 
-## 🔹 Etapa 4 — Dashboard
+### 🔹 Etapa 4 — Dashboard
 
 * [ ] Dashboard
 * [ ] Chamados abertos
@@ -512,13 +510,14 @@ O sistema está sendo desenvolvido e novas funcionalidades serão adicionadas ao
 * [ ] Chamados finalizados
 * [ ] Estatísticas
 
-## 🔹 Etapa 5 — Melhorias
+### 🔹 Etapa 5 — Melhorias
 
 * [ ] Responsividade
-* [ ] Melhorias de UX/UI
+* [ ] UX/UI
 * [ ] Validações
 * [ ] Tratamento de erros
-* [ ] Melhor organização do código
+* [ ] Segurança
+* [ ] Organização do código
 
 ---
 
@@ -540,43 +539,33 @@ Desenvolvedor do projeto.
 
 ---
 
-# 🤝 Desenvolvimento
-
-Este projeto está sendo desenvolvido em dupla por:
+# 🤝 Desenvolvimento em Dupla
 
 ```text
-       👨‍💻 CRHYSZ
-       Crhystian
-
-           +
-
-       👨‍💻 JP
-       João Pedro
+╔══════════════════════════════════════╗
+║                                      ║
+║             👨‍💻 CRHYSZ              ║
+║             Crhystian                ║
+║                                      ║
+║                  +                   ║
+║                                      ║
+║              👨‍💻 JP                 ║
+║             João Pedro               ║
+║                                      ║
+╚══════════════════════════════════════╝
 ```
 
-Utilizamos **Git e GitHub** para controle de versão, organização do código e colaboração durante o desenvolvimento.
+O projeto está sendo desenvolvido em conjunto utilizando **Git e GitHub** para controle de versão e colaboração.
 
 ---
 
-# 🧰 Ferramentas
+# 📈 Status
 
-<p align="center">
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
 
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white">
-<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white">
+![Version](https://img.shields.io/badge/Version-0.1.0-blue?style=for-the-badge)
 
-</p>
-
----
-
-# 📚 Tecnologias
-
-<p align="center">
-
-<img src="https://skillicons.dev/icons?i=html,js,react,bootstrap,nodejs,express,prisma,mongodb,git,github,vscode">
-
-</p>
+![IA](https://img.shields.io/badge/Inteligência%20Artificial-NÃO%20UTILIZADA-red?style=for-the-badge)
 
 ---
 
@@ -593,7 +582,7 @@ Este projeto está sendo desenvolvido para fins de:
 
 # ⭐ Apoie o Projeto
 
-Se você gostou do projeto ou acompanhou nosso desenvolvimento, considere deixar uma ⭐ no repositório.
+Se você gostou do projeto ou está acompanhando nosso desenvolvimento, considere deixar uma ⭐ no repositório.
 
 ---
 
@@ -615,3 +604,7 @@ Se você gostou do projeto ou acompanhou nosso desenvolvimento, considere deixar
 
 </div>
 ```
+
+**Agora os badges não dependem do `skillicons.dev`**: eles são imagens geradas pelo **Shields.io**, com os logos das próprias tecnologias. Isso tende a funcionar diretamente no GitHub.
+
+E um detalhe importante: no README do GitHub, **não precisa colocar HTML `<img>` para esses badges**. O formato `![Nome](URL)` acima é o Markdown padrão e o GitHub renderiza as imagens automaticamente.
