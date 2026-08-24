@@ -1,4 +1,4 @@
-# 🎫 Sistema de Chamados — Suporte Técnico de TI
+# 🎫 Sistema de Chamados
 
 <p align="center">
 
