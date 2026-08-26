@@ -2,8 +2,8 @@ import 'dotenv/config';
 import express from "express";
 import cors from "cors";
 import pkg from "@prisma/client";
-import router from './routes/auth';
-
+import authRoutes from "./routes/auth.js";
+import chamadosRoutes from "./routes/chamados.js";
 const app = express();
 
 const { PrismaClient } = pkg;
@@ -12,13 +12,9 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
-app.use('/auth', router);
+app.use('/auth', authRoutes);
+app.use("/chamados", chamadosRoutes);
 
-app.get('/', (req, res) => {
-  res.json({
-    message: "Api Funcionando!"
-  })
-})
 //SERVIDORR
 const PORT = 3000;
 
