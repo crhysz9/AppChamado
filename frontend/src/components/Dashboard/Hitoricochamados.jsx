@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Hitoricochamados = () => {
+
+const [chamados, setChamados] = useState([]);
+
+useEffect(() => {
+  fetch("http://localhost:3000/chamados")
+    .then(response => response.json())
+    .then(data => setChamados(data));
+}, []);
+
   return (
     <div className="container my-4">
       <div className="card shadow-sm border-0 rounded-4">
@@ -27,34 +36,16 @@ const Hitoricochamados = () => {
               </thead>
 
               <tbody>
-
-                <tr>
-                  <th>001</th>
-                  <td>PC não liga</td>
-                  <td>Aberto</td>
-                  <td>Media</td>
-                  <td>Carla</td>
-                  <td>19/08/26</td>
+                {chamados.map(chamado => (
+                <tr key={chamado.id}>
+                  <th>{chamado.id.slice(-4)}</th>
+                  <td>{chamado.assunto}</td>
+                  <td>{chamado.status}</td>
+                  <td>{chamado.prioridade}</td>
+                  <td>{chamado.usuarioId}</td>
+                  <td>{new Date(chamado.data).toLocaleString("pt-BR")}</td>
                 </tr>
-
-                <tr>
-                  <th>002</th>
-                  <td>Erro no sistema</td>
-                  <td>Pendente</td>
-                  <td>Baixa</td>
-                  <td>João</td>
-                  <td>18/08/26</td>
-                </tr>
-
-                <tr>
-                  <th>003</th>
-                  <td>Problema com impressora</td>
-                  <td>Resolvido</td>
-                  <td>Baixa</td>
-                  <td>Pedro</td>
-                  <td>17/08/26</td>
-                </tr>
-
+                ))}
               </tbody>
 
             </table>
