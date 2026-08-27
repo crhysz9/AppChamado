@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
 
   const [email, setEmail] = useState("");
+  const [nome, setNome] = useState(""); 
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Register = () => {
       },
       body: JSON.stringify({
         email,
+        nome,
         password
       })
     });
@@ -44,6 +46,20 @@ const Register = () => {
           </div>
 
           <form onSubmit={register}>
+            <div className="mb-3">
+                <label htmlFor="nome" className="form-label">
+                  Nome
+                </label>
+
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Digite seu nome"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  required
+                />
+              </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email</label>
 

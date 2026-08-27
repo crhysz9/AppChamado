@@ -10,11 +10,11 @@ const router = Router();
 
 router.post("/register", async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { nome, email, password } = req.body;
 
-    if (!email || !password) {
+    if (!nome || !email || !password) {
       return res.status(400).json({
-        message: "Email e senha sao obrigatorios"
+        message: "Nome, email e senha sao obrigatorios"
       });
     }
 
@@ -24,7 +24,7 @@ router.post("/register", async (req, res) => {
 
     if (existingUser) {
       return res.status(409).json({
-        message: "user ja existe"
+        message: "email ja existe"
       });
     }
 
@@ -32,19 +32,22 @@ router.post("/register", async (req, res) => {
 
     const user = await prisma.user.create({
       data: {
+        nome,
         email,
         password: hashedPassword
       }
     });
 
     res.status(201).json({
-      message: "criado com suceesso",
+      message: "criado com sucesso",
       user: {
         id: user.id,
+        nome: user.nome,
         email: user.email,
         role: user.role
       }
     });
+
   } catch (error) {
     console.error(error);
 
@@ -54,15 +57,16 @@ router.post("/register", async (req, res) => {
   }
 });
 
+
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password){
+    if (!email || !password) {
       return res.status(400).json({
-        message:"Email e senha são obrigatórios"
+        message: "Email e senha sao obrigatórios"
       });
-    };
+    }
 
     const user = await prisma.user.findUnique({
       where: { email }
@@ -70,7 +74,7 @@ router.post("/login", async (req, res) => {
 
     if (!user) {
       return res.status(401).json({
-        message: "email ou senha errados"
+        message: "email ou senha estao errados"
       });
     }
 
@@ -84,35 +88,25 @@ router.post("/login", async (req, res) => {
         message: "email ou senha errados"
       });
     }
-
-    const token = jwt.sign(
-      {
-        id: user.id,
-        email: user.email,
-        role: user.role
-      },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "7d"
-      }
-    );
-
     res.json({
-      message: "login feito com sucesso",
-      token,
+      message: "login feito meu mano",
       user: {
         id: user.id,
+        nome: user.nome,
         email: user.email,
         role: user.role
       }
     });
+
   } catch (error) {
     console.error(error);
 
     res.status(500).json({
-      message: "Erro ao fazer login"
+      message: "Erro"
     });
   }
 });
+
+
 
 export default router;

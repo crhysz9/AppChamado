@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const router = express.Router();
 const prisma = new PrismaClient();
-
+-
 //ROTA CRIAR CHAMADO
 
 router.post("/", async (req, res) => {
@@ -22,11 +22,14 @@ router.post("/", async (req, res) => {
 //ROTA LISTARR CHAMADOS
 
 router.get("/", async (req, res) => {
+  
+  const chamados = await prisma.chamado.findMany({
+    include: {
+      usuario: true
+    }
+  });
 
-  const chamados = await prisma.chamado.findMany();
-
-  res.status(200).json(chamados);
-
+  res.json(chamados);
 });
 
 

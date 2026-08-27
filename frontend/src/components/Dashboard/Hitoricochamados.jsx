@@ -42,7 +42,7 @@ useEffect(() => {
                   <td>{chamado.assunto}</td>
                   <td>{chamado.status}</td>
                   <td>{chamado.prioridade}</td>
-                  <td>{chamado.usuarioId}</td>
+                  <td>{chamado.usuario.nome}</td>
                   <td>{new Date(chamado.data).toLocaleString("pt-BR")}</td>
                 </tr>
                 ))}
