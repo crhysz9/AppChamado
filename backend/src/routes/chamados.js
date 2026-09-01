@@ -3,7 +3,6 @@ import { PrismaClient } from "@prisma/client";
 
 const router = express.Router();
 const prisma = new PrismaClient();
--
 //ROTA CRIAR CHAMADO
 
 router.post("/", async (req, res) => {
@@ -31,8 +30,5 @@ router.get("/", async (req, res) => {
 
   res.json(chamados);
 });
-
-
-
 
 export default router;

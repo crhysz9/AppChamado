@@ -14,17 +14,17 @@ router.post("/register", async (req, res) => {
 
     if (!nome || !email || !password) {
       return res.status(400).json({
-        message: "Nome, email e senha sao obrigatorios"
+        message: "Nome, email e senha sao obrigatorios",
       });
     }
 
     const existingUser = await prisma.user.findUnique({
-      where: { email }
+      where: { email },
     });
 
     if (existingUser) {
       return res.status(409).json({
-        message: "email ja existe"
+        message: "email ja existe",
       });
     }
 
@@ -34,8 +34,8 @@ router.post("/register", async (req, res) => {
       data: {
         nome,
         email,
-        password: hashedPassword
-      }
+        password: hashedPassword,
+      },
     });
 
     res.status(201).json({
@@ -44,19 +44,17 @@ router.post("/register", async (req, res) => {
         id: user.id,
         nome: user.nome,
         email: user.email,
-        role: user.role
-      }
+        role: user.role,
+      },
     });
-
   } catch (error) {
     console.error(error);
 
     res.status(500).json({
-      message: "Erro ao criar a conta"
+      message: "Erro ao criar a conta",
     });
   }
 });
-
 
 router.post("/login", async (req, res) => {
   try {
@@ -64,49 +62,59 @@ router.post("/login", async (req, res) => {
 
     if (!email || !password) {
       return res.status(400).json({
-        message: "Email e senha sao obrigatórios"
+        message: "Email e senha sao obrigatórios",
       });
     }
 
     const user = await prisma.user.findUnique({
-      where: { email }
+      where: { email },
     });
 
     if (!user) {
       return res.status(401).json({
-        message: "email ou senha estao errados"
+        message: "email ou senha estao errados",
       });
     }
 
-    const passwordMatch = await bcrypt.compare(
-      password,
-      user.password
-    );
+    const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (!passwordMatch) {
       return res.status(401).json({
-        message: "email ou senha errados"
+        message: "email ou senha errados",
       });
     }
+
+    const token = jwt.sign(
+      {
+        id: user.id,
+        nome: user.nome,
+        email: user.email,
+        role: user.role,
+      },
+
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "24h",
+      },
+    );
+
     res.json({
-      message: "login feito meu mano",
+      message: "Login efetuado com sucesso.",
+      token,
       user: {
         id: user.id,
         nome: user.nome,
         email: user.email,
-        role: user.role
-      }
+        role: user.role,
+      },
     });
-
   } catch (error) {
     console.error(error);
 
     res.status(500).json({
-      message: "Erro"
+      message: "Erro",
     });
   }
 });
-
-
 
 export default router;
