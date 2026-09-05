@@ -5,7 +5,7 @@ const CardUsers = () => {
     <main className="container-fluid pt-5 mt-4">
       <section className="mb-4 text-center">
         <h2 className="fw-bold mb-1">
-          Olá, 
+          Olá, NOME DO USUÁRIO
         </h2>
 
         <p className="text-muted mb-0">

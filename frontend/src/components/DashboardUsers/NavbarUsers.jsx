@@ -1,53 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "../../assets/logo.png";
 
-const navbar = () => {
+const NavbarUsers = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
-    <>
-      <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">N-Help</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <header className="bg-white sticky-top px-4 py-4 d-flex align-items-center justify-content-between border-bottom">
+
+      <div className="d-flex align-items-center gap-3">
+        <img
+          src={logo}
+          alt="N-Help"
+          style={{
+            width: "42px",
+            height: "42px",
+            objectFit: "contain"
+          }}
+        />
+        <h1 className="fs-5 fw-bold text-dark mb-0">
+          N-Help
+        </h1>
+      </div>
+
+      <div className="d-flex align-items-center gap-2">
+
+        <div className="position-relative">
+
+          <button
+            className="btn btn-light rounded-circle d-flex align-items-center justify-content-center"
+            style={{
+              width: "42px",
+              height: "42px",
+              fontSize: "22px"
+            }}
+            onClick={() => setMenuAberto(!menuAberto)}
+            aria-label="Menu"
+          >
+            ⋮
           </button>
 
 
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">N-Help</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          {menuAberto && (
+            <div
+              className="position-absolute bg-white border rounded-3 shadow-sm p-2"
+              style={{
+                right: 0,
+                top: "50px",
+                width: "160px"
+              }}
+            >
+              <button
+                className="btn btn-light w-100 text-start text-danger"
+              >
+                Sair da conta
+              </button>
+
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Chamados
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Abrir Chamado</a></li>
-                    <li><a class="dropdown-item" href="#">Meus Chamados</a></li>
-                    <li>
-                      <hr class="dropdown-divider"></hr>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Histórico de Chamados</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-              </form>
-            </div>
-          </div>
+          )}
+
         </div>
-      </nav>
-    </>
+
+      </div>
+
+    </header>
   );
 };
 
-export default navbar;
+export default NavbarUsers;
