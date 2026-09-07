@@ -1,8 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const NavbarUsers = () => {
   const [menuAberto, setMenuAberto] = useState(false);
+
+  const navigate = useNavigate();
+
+  const sair = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+
+    navigate("/login");
+  };
 
   return (
     <header className="bg-white sticky-top px-4 py-4 d-flex align-items-center justify-content-between border-bottom">
@@ -17,6 +27,7 @@ const NavbarUsers = () => {
             objectFit: "contain"
           }}
         />
+
         <h1 className="fs-5 fw-bold text-dark mb-0">
           N-Help
         </h1>
@@ -39,7 +50,6 @@ const NavbarUsers = () => {
             ⋮
           </button>
 
-
           {menuAberto && (
             <div
               className="position-absolute bg-white border rounded-3 shadow-sm p-2"
@@ -51,10 +61,10 @@ const NavbarUsers = () => {
             >
               <button
                 className="btn btn-light w-100 text-start text-danger"
+                onClick={sair}
               >
                 Sair da conta
               </button>
-
             </div>
           )}
 

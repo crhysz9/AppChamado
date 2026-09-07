@@ -26,7 +26,10 @@ const Login = () => {
 
     if (response.ok) {
 
-      if (data.role === "ADMIN") {
+      localStorage.setItem("user", JSON.stringify(data.user));
+      localStorage.setItem("token", data.token);
+
+      if (data.user.role === "ADMIN") {
         navigate("/admin");
       } else {
         navigate("/user");

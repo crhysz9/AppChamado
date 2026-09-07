@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardAdmin from "./components/DashboardAdmin/Dashboard";
 import Login from "./pages/Login";
@@ -13,14 +12,22 @@ function App() {
 
         <BrowserRouter>
           <Routes>
+
+            <Route path="/" element={<Login />} />
+
             <Route path="/user" element={<DashboardUsers />} />
+
             <Route path="/admin" element={<DashboardAdmin />} />
+
             <Route path="/login" element={<Login />} />
+
             <Route path="/register" element={<Register />} />
+
           </Routes>
         </BrowserRouter>
 
         <Footer />
+
       </div>
     </>
   );
