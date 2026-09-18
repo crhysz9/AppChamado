@@ -51,7 +51,7 @@ const Login = () => {
         <div className="card-body p-4">
 
           <div className="text-center mb-4">
-            <h2 className="fw-bold">N-Help</h2>
+            <h2 className="fw-bold ">N-Help</h2>
             <p className="text-muted mb-0">Entre na sua conta</p>
           </div>
 
